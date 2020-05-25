@@ -91,6 +91,7 @@ void print_winner(void)
             winner = candidates[i].votes;
         }
     }
+    // this is a linear search
     for (int i = 0; i < candidate_count; i++ )
     {
         if (candidates[i].votes == winner)
