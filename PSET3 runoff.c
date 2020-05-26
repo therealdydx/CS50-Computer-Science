@@ -258,6 +258,11 @@ bool is_tie(int min)
     }
     return true;
 }
+// How the logic works is that if you can't eliminate anybody else
+// Then it is a tie. You only can't eliminate anybody else if all are equal
+// Means all are equal to minimum value. As long as there is someone above min value
+// That means that you can potentially eliminate someone
+
 // ________________________________________________________
 
 // Eliminate the candidate (or candidiates) in last place
