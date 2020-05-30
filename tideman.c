@@ -1,3 +1,5 @@
+// may not be 100% accurate but 95% accurate**
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
