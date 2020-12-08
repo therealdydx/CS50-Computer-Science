@@ -1,3 +1,4 @@
+// include libraries
 #include <stdio.h>
 #include <cs50.h>
 #include <math.h>
@@ -6,13 +7,15 @@ int main(void)
 {
 // Input the change owed into the programme
     float dollars;
+
+    // get the amount of change owed
     do
     {
     dollars = get_float("Change owed:");
     }
     while(dollars < 0);
 
-// Convert cents to dollars
+// Convert dollars to cents
     int cents = round(dollars * 100);
 
 // Initialize value of coins to be 0

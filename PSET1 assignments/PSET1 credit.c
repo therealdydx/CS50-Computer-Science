@@ -6,6 +6,7 @@ int main(void)
 {
     // insert variables here
     long card_number;
+
     // get card number here
     do
     {
@@ -18,16 +19,18 @@ int main(void)
     // make a copy of the card number to play around with, and initialize variables
     long card_number_1 = card_number;
     int one_digit = 0;
-    int two_digit = 0; 
+    int two_digit = 0;
     int digit = 0;
     int product = 0;
     int sum = 0;
     int sum1 = 0;
     int sum2 = 0;
+    int checking_digit = 0;
 
     // double the second digit and collect those numbers with a loop
     while (card_number_1 > 0)
     {
+        // this gives you the last digit after dividing 10, and multiply
         digit = (card_number_1/10) % 10;
         product = digit * 2;
 
@@ -43,7 +46,7 @@ int main(void)
         }
         //  gets the final product, and then deduct 2 digits away
         sum1 = sum1 + product;
-        
+
         card_number_1 = card_number_1 / 100;
     }
     // create a new loop for the first digits, first creating number again
@@ -71,16 +74,21 @@ int main(void)
         {
             card_number_3 = card_number_3 / 10;
             total_number++;
+
+            if (card_number_3 < 100 && card_number_3 > 10)
+            {
+                checking_digit = card_number_3;
+            }
         }
 
         // check if it is AMEX
         if (total_number == 15)
         {
-            if (card_number > 340000000000000 && card_number < 350000000000000 )
+            if (checking_digit >= 34 && checking_digit <= 35 )
             {
                 printf("AMEX\n");
             }
-            else if (card_number > 370000000000000 && card_number < 380000000000000)
+            else if (checking_digit >= 37 && card_number <= 38)
             {
                 printf("AMEX\n");
             }
@@ -89,17 +97,17 @@ int main(void)
                 printf("INVALID\n");
             }
         }
-        
+
         // check if it is mastercard
         else if (total_number == 16)
         {
-            if (card_number > 5100000000000000 && card_number < 5600000000000000)
+            if (checking_digit >= 51 && checking_digit <= 56)
             {
                 printf("MASTERCARD\n");
             }
-            
+
         // check if it is visa
-            else if (card_number > 4000000000000000 && card_number < 5000000000000000)
+            else if (checking_digit >= 40 && checking_digit <= 50)
             {
                 printf("VISA\n");
             }
@@ -108,11 +116,11 @@ int main(void)
                 printf("INVALID\n");
             }
         }
-        
+
         // check if it is visa
         else if (total_number == 13)
         {
-            if (total_number == 13 && (card_number > 4000000000000 && card_number < 5000000000000))
+            if (total_number == 13 && (checking_digit >= 40 && checking_digit < 50))
             {
                 printf("VISA\n");
             }

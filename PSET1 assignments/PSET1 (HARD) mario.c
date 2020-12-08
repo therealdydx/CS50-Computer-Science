@@ -1,8 +1,8 @@
+// include the libraries 
 #include <stdio.h>
 #include <cs50.h>
 
 // create a function
-
 void print(char c, int j)
 {
     for (int i = 0; i < j; i++)
@@ -11,6 +11,7 @@ void print(char c, int j)
     }
 }
 
+// include main() the function to be run
 int main(void)
 {
     // get the number for which to build the 2 sided pyramid 
@@ -35,6 +36,7 @@ int main(void)
     1*2*3* 4 5 6* 7*8*, so 0 space, 3 hashes, 2 spaces, 3 hashes
     
     aka can put to
+                   blank  hash blank hash
     n = 3, i = 0 > n-1-i | 1+i | 2 | 1+i
     n = 3, i = 1 > n-1-i | 1+i | 2 | 1+i
     n = 3, i = 2 > n-1-i | 1+i | 2 | 1+i

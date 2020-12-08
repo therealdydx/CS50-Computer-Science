@@ -6,6 +6,7 @@
 int main(int argc, string argv[])
 {
     // WE WILL ATTEMPT TO CLEAN UP THE INPUT HERE:
+
     // check if the user provided 2 arguments or not
     if (argc != 2)
     {
@@ -28,16 +29,7 @@ int main(int argc, string argv[])
             printf("Key must contain 26 characters.");
             return 1;
         }
-    } // initial checks have completed
-
-    // initialize a variable for uppercase and lowercase, create 2D array
-    char argument[3][26];
-    for (int i = 0; i < 26; i++)
-    {
-        argument[0][i] = 'A' + i;
-        argument[1][i] = argv[1][i];
-        argument[2][i] = 'a' + i;
-    }
+    } 
 
     // check for repeated characters
     for (int i = 0; i < 26; i++)
@@ -55,23 +47,36 @@ int main(int argc, string argv[])
                 }
             }
         }
+    }// initial checks have completed
+
+
+    // initialize a variable for uppercase and lowercase, create 2D array
+    char argument[3][26];
+    for (int i = 0; i < 26; i++)
+    {
+        argument[0][i] = 'A' + i;
+        argument[1][i] = argv[1][i];
+        argument[2][i] = 'a' + i;
     }
 
+    
 /* CONVERSION ALGORITHM IS HERE:
 
     FIRST, LET'S PUT OUT A HYPOTHETICAL SITUATION TO DEDUCE A WORKING ALGORITHM:
 
     assume that our argv inputed argument is
 
-    Random Translation: ATHERI > [0][1, 2, 3, 4, 5, 6] where argv[0][1 - 26]
+                                     A  T  H  E  R  I
+    Random Translation: ATHERI > [0][0, 1, 2, 3, 4, 5] where argv[0][1 - 26]
                         ASCII char: [65,84,72,69,82,73]
 
-    Translation Theory: ABCDEF > [1][1, 2, 3, 4, 5, 6] where argv[1][1 - 26]
+                                     A  B  C  D  E  F
+    Translation Theory: ABCDEF > [1][0, 1, 2, 3, 4, 5] where argv[1][1 - 26]
                         ASCII char: [65,66,67,68,69,70]
 
     so if i input
                                        [4, 0, 1, 2, 3, 4]
-    Input Characters: R A T H E R > [0][65,84,72,69,82,73]
+    Input Characters: R A T H E R > [0][82,65,84,72,69,82]
     Print Characters: E A B C D E > [1][69,65,66,67,68,69]
                                        [4, 0, 1, 2, 3, 4]
 
