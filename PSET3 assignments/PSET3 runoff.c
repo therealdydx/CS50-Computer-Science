@@ -77,6 +77,7 @@ int main(int argc, string argv[])
 
     // _____________________________________________
 
+    // populate the candidates array with the relevant candidates and their characteristics
     for (int i = 0; i < candidate_count; i++)
     {
         candidates[i].name = argv[i + 1];
@@ -87,7 +88,6 @@ int main(int argc, string argv[])
     // ______________________________________________
 
     // Check if the number of voters is above the maximum number
-
     voter_count = get_int("Number of voters: ");
     if (voter_count > MAX_VOTERS)
     {
@@ -164,10 +164,14 @@ int main(int argc, string argv[])
 
 bool vote(int voter, int rank, string name)
 {
+    
+    // i is the candidate in the candidates array, so i = 1 could be charlie if charlie is 1st
     for (int i =0; i < candidate_count; i++)
     {
+        // if there is a match between the name in candidates array and input
         if (strcmp(candidates[i].name, name) == 0)
         {
+            // insert the name into the preferences array
             preferences[voter][rank] = i;
             return true;
         }
@@ -215,9 +219,12 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
+    // iterate through each candidate
     for (int i = 0; i < candidate_count; i++)
     {
         string winner = candidates[i].name;
+        
+        // if the candidate has more than a plurality of the votes, heshe wins
         if (candidates[i].votes > voter_count / 2)
         {
             printf("%s\n", winner);
