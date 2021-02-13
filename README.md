@@ -1,15 +1,38 @@
 # CS50 Assignments
 
-This contains my solutions for all of the PSETs, both easy and hard, for the entire course from week 1 - 7 (excluding the tracks)
+This contains my solutions for all of the PSETs, both easy and hard, for the entire course from week 1 - 7 (excluding the tracks). Coded in C, Python and SQL.
 
-For PSET4, 5, the assignment file is filter.c and dictionary.c respectively. thanks!
+Just a note, for PSET4, 5, the assignment file is filter.c and dictionary.c respectively. thanks!
 
-## Assignments
 
-Week 1: Basic C (C)  
-Week 2: Arrays (C)  
-Week 3: Algorithms (C)  
-Week 4: Memory (C)  
-Week 5: Data Structures (C)  
-Week 6: Basic Python (Python)  
-Week 7: Basic SQL (SQL)  
+
+## Problem Sets
+
+| Week | Topic           | Name                                                         | Description                                                  | How to Run                                                   | Syntax      |
+| :--- | :-------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- | ----------- |
+| 1    | C               | [Hello](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET1%20assignments/PSET1%20hello.c) | Implement a program that prints out a simple greeting to the user | `$ ./hello`                                                  | C           |
+| 1    | C               | [Cash](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET1%20assignments/PSET1%20cash.c) | Implement a program that calculates the minimum number of coins required to give a user change | `$ ./cash`                                                   | C           |
+| 1    | C               | [Credit](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET1%20assignments/PSET1%20credit.c) | Implement a program that determines whether a provided credit card number is valid according to Luhn’s algorithm | `$ ./credit`                                                 | C           |
+| 1    | C               | [Mario - Easy](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET1%20assignments/PSET1%20(EASY)%20mario.c) | Implement a program that prints out a half-pyramid of a specified height | `$ ./mario`                                                  | C           |
+| 1    | C               | [Mario - Hard](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET1%20assignments/PSET1%20(HARD)%20mario.c) | Implement a program that prints out a double half-pyramid of a specified height | `$ ./mario`                                                  | C           |
+| 2    | Arrays          | [Readability](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET2%20assignments/PSET2%20readability.c) | Implement a program that computes the approximate grade level needed to comprehend some text | `$ ./readability`                                            | C           |
+| 2    | Arrays          | [Caesar - Easy](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET2%20assignments/PSET2%20caesar.c) | Implement a program that encrypts messages using Caesar’s cipher | `$ ./caesar 13`                                              | C           |
+| 2    | Arrays          | [Substitution - Hard](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET2%20assignments/PSET2%20substitution.c) | Implement a program that implements a substitution cipher    | `$ ./substitution JTREKYA...C`                               | C           |
+| 3    | Algorithms      | [Plurality](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET3%20assignments/PSET3%20plurality.c) | Implement a program that runs a plurality election           | `$ ./plurality Alice Bob`                                    | C           |
+| 3    | Algorithms      | [Runoff](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET3%20assignments/PSET3%20runoff.c) | Implement a program that runs a runoff election              | `$ ./runoff Alice Bob Charlie`                               | C           |
+| 3    | Algorithms      | [Tideman](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET3%20assignments/PSET3%20tideman.c) | Implement a program that runs a tideman election             | `$ ./tideman Alice Bob Charlie`                              | C           |
+| 4    | Memory          | [Recover](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET4%20recover) | Implement a program that recovers JPEGs from a forensic image | `$ ./recover card.raw`                                       | C           |
+| 4    | Memory          | [Filter - Easy](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET4%20filter%20(EASY)) | Implement a program that applies filters to BMPs             | `$ ./filter -g images/yard.bmp out.bmp`                      | C           |
+| 4    | Memory          | [Filter - Hard](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET4%20filter%20(HARD)) | Implement a program that applies filters to BMPs             | `$ ./filter -r image.bmp reflected.bmp`                      | C           |
+| 5    | Data Structures | [Speller](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET5%20speller) | Implement a program that spell-checks a file, a la the below, using a hash table | `$ ./speller text`                                           | C           |
+| 6    | Python          | [Hello](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20hello.py) | Implement a program that prints out a simple greeting to the user | `$ python hello.py`                                          | Python      |
+| 6    | Python          | [Cash](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20cash.py) | Implement a program that calculates the minimum number of coins required to give a user change | `$ python cash.py`                                           | Python      |
+| 6    | Python          | [Credit](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20credit.py) | Implement a program that determines whether a provided credit card number is valid according to Luhn’s algorithm | `$ python credit.py`                                         | Python      |
+| 6    | Python          | [Mario - Easy](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20(EASY)%20mario.py) | Implement a program that prints out a half-pyramid of a specified height | `$ python mario.py`                                          | Python      |
+| 6    | Python          | [Mario - Hard](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20(HARD)%20mario.py) | Implement a program that prints out a double half-pyramid of a specified height | `$ python mario.py`                                          | Python      |
+| 6    | Python          | [Readability](https://github.com/therealdydx/CS50-Computer-Science/blob/master/PSET6%20assignments/PSET6%20readability.py) | Implement a program that computes the approximate grade level needed to comprehend some text | `$ python readability.py`                                    | Python      |
+| 6    | Python          | [DNA](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET6%20dna) | Implement a program that identifies a person based on their DNA | `$ python dna.py databases/large.csv sequences/5.txt`        | Python      |
+| 7    | SQL             | [Houses](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET7%20houses) | Implement a program to import student data into a database, and then produce class rosters | `$ python import.py characters.csv` `$ python roster.py Gryffindor` | SQL, Python |
+| 7    | SQL             | [Movies](https://github.com/therealdydx/CS50-Computer-Science/tree/master/PSET7%20movies) | Write SQL queries to answer questions about a database of movies | NIL                                                          | SQL         |
+
+
